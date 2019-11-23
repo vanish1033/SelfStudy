@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="part5kaoshi:war">
+    <output-path>$PROJECT_DIR$/part5kaoshi/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>part5kaoshi</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="part5kaoshi-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="part5kaoshi:war exploded" />
+    </root>
+  </artifact>
+</component>

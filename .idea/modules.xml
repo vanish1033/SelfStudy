@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/02SESelfstudy/02SESelfstudy.iml" filepath="$PROJECT_DIR$/02SESelfstudy/02SESelfstudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/03SESelfstudy/03SESelfstudy.iml" filepath="$PROJECT_DIR$/03SESelfstudy/03SESelfstudy.iml" />
+      <module fileurl="file://$PROJECT_DIR$/EnumSingle/EnumSingle.iml" filepath="$PROJECT_DIR$/EnumSingle/EnumSingle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/MyGC/MyGC.iml" filepath="$PROJECT_DIR$/MyGC/MyGC.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Stream/Stream.iml" filepath="$PROJECT_DIR$/Stream/Stream.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aj/aj.iml" filepath="$PROJECT_DIR$/aj/aj.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demo/demo.iml" filepath="$PROJECT_DIR$/demo/demo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/dontKnow/dontKnow.iml" filepath="$PROJECT_DIR$/dontKnow/dontKnow.iml" />
+      <module fileurl="file://$PROJECT_DIR$/jedisdemo/jedisdemo.iml" filepath="$PROJECT_DIR$/jedisdemo/jedisdemo.iml" />
+      <module fileurl="file://$PROJECT_DIR$/mybatis-plus-1/mybatis-plus-1.iml" filepath="$PROJECT_DIR$/mybatis-plus-1/mybatis-plus-1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nio-chat-room/nio-chat-room.iml" filepath="$PROJECT_DIR$/nio-chat-room/nio-chat-room.iml" />
+      <module fileurl="file://$PROJECT_DIR$/part5kaoshi/part5kaoshi.iml" filepath="$PROJECT_DIR$/part5kaoshi/part5kaoshi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/restfulssm1/restfulssm1.iml" filepath="$PROJECT_DIR$/restfulssm1/restfulssm1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ssm3/ssm3.iml" filepath="$PROJECT_DIR$/ssm3/ssm3.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zhengti/zhengti.iml" filepath="$PROJECT_DIR$/zhengti/zhengti.iml" />
+    </modules>
+  </component>
+</project>

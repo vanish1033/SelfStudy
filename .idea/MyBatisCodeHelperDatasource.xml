@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="MyBatisCodeHelperDatasource">
+    <option name="projectProfile">
+      <ProjectProfile>
+        <option name="genSqlFilePath" value="$PROJECT_DIR$/part5kaoshi/src/main/java/domain" />
+        <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+        <option name="javaMapperPath" value="F:\1911\SelfStudy\mybatis-plus-1\src\main\java\com\whr\mybatisplus\mybatisplus1\dao" />
+        <option name="javaModelPackage" value="com.bjpowernode.domain" />
+        <option name="javaModelPath" value="F:\1911\SelfStudy\mybatis-plus-1\src\main\java\com\whr\mybatisplus\mybatisplus1\domain" />
+        <option name="lastDatabaseCrudChooseModuleName" value="part5kaoshi" />
+        <option name="lombokDataAnnotation" value="true" />
+        <option name="moduleNameToPackageAndPathMap">
+          <map>
+            <entry key="part5kaoshi">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+                  <option name="javaMapperPath" value="F:\1911\SelfStudy\mybatis-plus-1\src\main\java\com\whr\mybatisplus\mybatisplus1\dao" />
+                  <option name="javaModelPacakge" value="com.bjpowernode.domain" />
+                  <option name="javaModelPath" value="F:\1911\SelfStudy\mybatis-plus-1\src\main\java\com\whr\mybatisplus\mybatisplus1\domain" />
+                  <option name="xmlPackage" value="com.bjpowernode.dao" />
+                  <option name="xmlPath" value="F:\1911\SelfStudy\mybatis-plus-1\src\main\java\com\whr\mybatisplus\mybatisplus1\dao" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="restfulssm1">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/restfulssm1/src/main/java" />
+                  <option name="javaModelPacakge" value="com.bjpowernode.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/restfulssm1/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.bjpowernode.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/restfulssm1/src/main/java" />
+                  <option name="javaServicePackage" value="com.bjpowernode.service.impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/restfulssm1/src/main/java" />
+                  <option name="xmlPackage" value="com.bjpowernode.dao" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/restfulssm1/src/main/java" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+            <entry key="ssm3">
+              <value>
+                <UserPackageAndPathInfoByModule>
+                  <option name="javaMapperPackage" value="com.bjpowernode.dao" />
+                  <option name="javaMapperPath" value="$PROJECT_DIR$/ssm3/src/main/java" />
+                  <option name="javaModelPacakge" value="com.bjpowernode.domain" />
+                  <option name="javaModelPath" value="$PROJECT_DIR$/ssm3/src/main/java" />
+                  <option name="javaServiceInterfacePackage" value="com.bjpowernode.service" />
+                  <option name="javaServiceInterfacePath" value="$PROJECT_DIR$/ssm3/src/main/java" />
+                  <option name="javaServicePackage" value="com.bjpowernode.service.impl" />
+                  <option name="javaServicePath" value="$PROJECT_DIR$/ssm3/src/main/java" />
+                  <option name="xmlPackage" value="com.bjpowernode.dao" />
+                  <option name="xmlPath" value="$PROJECT_DIR$/ssm3/src/main/java" />
+                </UserPackageAndPathInfoByModule>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="tableGenerateConfigs">
+          <map>
+            <entry key="part4:user">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="User" />
+                  <option name="moduleName" value="restfulssm1" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="part5:tbl_class">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="TblClass" />
+                  <option name="moduleName" value="part5kaoshi" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+            <entry key="part5:tbl_student">
+              <value>
+                <TableGenerateConfig>
+                  <option name="generatedKey" value="id" />
+                  <option name="javaModelName" value="Student" />
+                  <option name="moduleName" value="part5kaoshi" />
+                  <option name="sequenceColumn" value="" />
+                  <option name="sequenceId" value="" />
+                  <option name="useActualColumnName" value="false" />
+                </TableGenerateConfig>
+              </value>
+            </entry>
+          </map>
+        </option>
+        <option name="useLomBokOnModel" value="true" />
+        <option name="xmlMapperPackage" value="com.bjpowernode.dao" />
+        <option name="xmlMapperPath" value="F:\1911\SelfStudy\mybatis-plus-1\src\main\java\com\whr\mybatisplus\mybatisplus1\dao" />
+      </ProjectProfile>
+    </option>
+  </component>
+</project>
