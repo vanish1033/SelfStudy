@@ -5,6 +5,7 @@ import com.google.common.collect.*;
 import com.google.common.primitives.Chars;
 import org.junit.Test;
 
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
