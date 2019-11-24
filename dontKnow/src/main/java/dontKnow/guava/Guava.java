@@ -5,6 +5,7 @@ import com.google.common.collect.*;
 import com.google.common.primitives.Chars;
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -28,9 +29,14 @@ public class Guava {
     @Test
     public void test2() {
         List<Integer> integers = Lists.newArrayList();
+        List<String> strings = Lists.newArrayList();
         integers.add(1);
         integers.add(2);
         integers.add(3);
+
+        strings.add("1");
+        strings.add("2");
+        strings.add("3");
 
 //        List<Integer> integers1 = Collections.unmodifiableList(integers);
 
