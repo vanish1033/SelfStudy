@@ -462,7 +462,6 @@ public class Test {
         String c = a + " " + b;
         String[] s = c.split(" ");
 
-//        Arrays.stream(s).forEach(System.out::println);
 
         HashMap<String, Integer> map = new HashMap<>();
 
@@ -581,6 +580,9 @@ public class Test {
         String yyyyMMdd = parse.format(DateTimeFormatter.ofPattern("yyyyMMdd"));
         System.out.println(yyyyMMdd);
 
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
+        LocalDateTime parse1 = LocalDateTime.parse("1997-12-26 12:12:34", formatter);
+        System.out.println("parse1.format(formatter) = " + parse1.format(formatter));
     }
 
     /**
