@@ -1,7 +1,6 @@
 package dontKnow;
 
 import com.alibaba.fastjson.JSON;
-import com.google.errorprone.annotations.RequiredModifiers;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
@@ -30,7 +29,6 @@ import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.*;
 import java.util.stream.Collectors;
-import java.util.stream.IntStream;
 import java.util.stream.Stream;
 
 /**
@@ -179,9 +177,9 @@ public class Test {
         unsafeField.setAccessible(true);
         Unsafe unsafe = (Unsafe) unsafeField.get(null);
         System.out.println(unsafe);
-//        while (true) {
-//            unsafe.allocateMemory(1024L);
-//        }
+        while (true) {
+            unsafe.allocateMemory(1024L);
+        }
     }
 
     @org.junit.Test // 测试反射获取枚举单例
@@ -416,39 +414,30 @@ public class Test {
      */
     @org.junit.Test
     public void test19() {
-        String s = "(){}[]23(1){1[(232)1]}";
-//        s = "()[]{}";
-
-        char[] chars = s.toCharArray();
-//        练习使用方法引用
-//        new ArrayList<Integer>().sort(Integer::compare);
-
+        String str = "(){}[(){}[]]{{}(){}[]}[()[{}]{}]{}{}()";
+        char[] chars = str.toCharArray();
         Stack<Character> characters = new Stack<>();
 
         for (int i = 0; i < chars.length; i++) {
-            if (chars[i] == '(' || chars[i] == '[' || chars[i] == '{') {
-                characters.push(chars[i]);
-            }
-            if (chars[i] == ')') {
-                if (characters.peek() == '(') {
-                    characters.pop();
-                }
-            } else if (chars[i] == ']') {
-                if (characters.peek() == '[') {
-                    characters.pop();
-                }
-            } else if (chars[i] == '}') {
-                if (characters.peek() == '{') {
-                    characters.pop();
-                }
+            char aChar = chars[i];
+            if (aChar == '(' || aChar == '[' || aChar == '{') {
+                characters.push(aChar);
+            } else if (aChar == ')') {
+                if (characters.peek() != '(') break;
+                characters.pop();
+            } else if (aChar == ']') {
+                if (characters.peek() != '[') break;
+                characters.pop();
+            } else if (aChar == '}') {
+                if (characters.peek() != '{') break;
+                characters.pop();
             }
         }
-
         if (characters.isEmpty()) {
-            System.out.println("匹配");
-        } else {
-            System.out.println("不匹配");
+            log.info("括号匹配");
+            return;
         }
+        log.info("括号不匹配");
 
     }
 
@@ -718,6 +707,39 @@ public class Test {
         for (int i = 0; i < 100; i++) {
             System.out.println(random1.nextInt(100));
         }
+    }
+
+    /**
+     * 判断各种括号是否匹配
+     */
+    @org.junit.Test
+    public void test36() {
+
+        String str = "(){}[(){}[]]{{}(){}[]}[()[{}]{}]{}{}()";
+        char[] chars = str.toCharArray();
+        Stack<Character> characters = new Stack<>();
+
+        for (int i = 0; i < chars.length; i++) {
+            char aChar = chars[i];
+            if (aChar == '(' || aChar == '[' || aChar == '{') {
+                characters.push(aChar);
+            } else if (aChar == ')') {
+                if (characters.peek() != '(') break;
+                characters.pop();
+            } else if (aChar == ']') {
+                if (characters.peek() != '[') break;
+                characters.pop();
+            } else if (aChar == '}') {
+                if (characters.peek() != '{') break;
+                characters.pop();
+            }
+        }
+        if (characters.isEmpty()) {
+            log.info("括号匹配");
+            return;
+        }
+        log.info("括号不匹配");
+
     }
 
 }
