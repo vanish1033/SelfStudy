@@ -5,7 +5,6 @@ import com.google.common.collect.*;
 import com.google.common.primitives.Chars;
 import org.junit.Test;
 
-import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 import java.util.Set;
@@ -39,8 +38,11 @@ public class Guava {
         strings.add("3");
         strings.add("4");
         strings.add("5");
-        System.out.println("add phone");
+        strings.add("1");
+        ImmutableSet<String> strings1 = ImmutableSet.copyOf(strings);
+        System.out.println(strings1);
 
+        System.out.println("add phone");
 
 //        List<Integer> integers1 = Collections.unmodifiableList(integers);
 
@@ -65,6 +67,10 @@ public class Guava {
         Chars.asList("31278351764512847182312".toCharArray())
                 .stream()
                 .forEach(x -> chars.add(x));
+        chars.elementSet().stream().forEach(x -> {
+            System.out.println(x + " ------> " + chars.count(x));
+        });
+
         System.out.println("chars.size() = " + chars.size());
         System.out.println("chars.count('2') = " + chars.count((Character) '2'));
 

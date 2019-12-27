@@ -1,5 +1,7 @@
 package dontKnow;
 
+import org.omg.PortableInterceptor.INACTIVE;
+
 /**
  * 枚举单例
  *
@@ -8,27 +10,49 @@ package dontKnow;
 public class Single {
 
     private Single() {
-
     }
 
     public static Single getIntance() {
-        return Singleton.INSTANCE.getSingleTest();
+        return Singleton.INSTANCE.getSingle();
     }
 
     private enum Singleton {
 
         INSTANCE;
 
+        private Single single;
+
         Singleton() {
-            singleTest = new Single();
+            single = new Single();
         }
 
-        private Single singleTest;
-
-        private Single getSingleTest() {
-            return singleTest;
+        private Single getSingle() {
+            return this.single;
         }
 
     }
+
+//    private Single() {
+//    }
+//
+//    public static Single getIntance() {
+//        return Singleton.INSTANCE.getSingleTest();
+//    }
+//
+//    private enum Singleton {
+//
+//        INSTANCE;
+//
+//        Singleton() {
+//            singleTest = new Single();
+//        }
+//
+//        private Single singleTest;
+//
+//        private Single getSingleTest() {
+//            return singleTest;
+//        }
+//
+//    }
 
 }

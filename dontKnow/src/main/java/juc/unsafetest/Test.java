@@ -6,6 +6,7 @@ import sun.misc.Unsafe;
 
 import java.lang.reflect.Field;
 import java.util.concurrent.CountDownLatch;
+import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * @author:whr 2019/11/14
@@ -17,7 +18,6 @@ public class Test {
     public static Unsafe unsafe;
 
     private static CountDownLatch countDownLatch = new CountDownLatch(2);
-
     static {
         try {
             Field theUnsafe = Unsafe.class.getDeclaredField("theUnsafe");

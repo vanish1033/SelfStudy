@@ -8,6 +8,7 @@ import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
 import lombok.extern.slf4j.Slf4j;
 import myannotation.ProblemCode;
+import org.apache.commons.lang3.StringUtils;
 import org.dom4j.Document;
 import org.dom4j.DocumentException;
 import org.dom4j.DocumentHelper;
@@ -21,6 +22,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
+import java.math.BigDecimal;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.text.ParseException;
@@ -741,5 +743,94 @@ public class Test {
         log.info("括号不匹配");
 
     }
+
+    /**
+     * 测试Integer的缓存机制
+     */
+    @org.junit.Test
+    public void test37() {
+        Integer integer = new Integer(2);
+        Integer integer1 = new Integer(2);
+
+        Integer integer2 = 3;
+        Integer integer3 = 3;
+
+        Integer integer4 = 128;
+        Integer integer5 = 128;
+
+        System.out.println(integer == integer1); // false 虽然Integer底层有缓存机制，但是手动new利用不了缓存
+        System.out.println(integer2 == integer3); // true 能利用到缓存
+        System.out.println("integer4==integer5 = " + (integer4 == integer5)); // false 超出缓存的范围了
+    }
+
+    /**
+     * 打印九九乘法表 | 99乘法表
+     */
+    @org.junit.Test
+    public void test38() {
+        for (int i = 1; i <= 9; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " x " + i + " = " + (i * j) + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    /**
+     * 反过来打印九九乘法表 | 99乘法表
+     */
+    @org.junit.Test
+    public void test39() {
+        for (int i = 9; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print(j + " x " + i + " = " + (i * j) + " ");
+            }
+            System.out.println();
+        }
+    }
+
+    @org.junit.Test
+    public void test40() {
+        String str = "";
+        System.out.println("StringUtils.isEmpty(str) = " + StringUtils.isEmpty(str));
+//
+//        Single intance = Single.getIntance();
+//        Single intance1 = Single.getIntance();
+//        System.out.println("intance==intance1 = " + (intance == intance1));
+    }
+
+    @org.junit.Test
+    public void test41() {
+        System.out.println(new A().method1(1, 1));
+    }
+
+    /**
+     * 测试 BigDecimal 和 Math 类的ceil(向上取整), floor(向下取整), round(四舍五入, 原理是 +0.5 再向下取整)
+     */
+    @org.junit.Test
+    public void test42() {
+        BigDecimal bigDecimal = new BigDecimal("4.99");
+        BigDecimal add = bigDecimal.add(new BigDecimal("1.01"));
+        System.out.println(add);
+
+        System.out.println(Math.ceil(1.1));
+        System.out.println(Math.floor(1.9));
+        System.out.println(Math.round(1.5));
+        System.out.println(Math.round(1.4));
+        System.out.println(Math.round(-1.5));
+        System.out.println(Math.round(-1.6));
+
+    }
+
+    @org.junit.Test
+    public void test43() {
+        LocalDateTime now = LocalDateTime.now();
+        LocalDateTime localDateTime = now.minusYears(1L);
+        System.out.println(localDateTime);
+        DateTimeFormatter dateTimeFormatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss:SSS");
+        String format = dateTimeFormatter.format(localDateTime);
+        System.out.println(format);
+    }
+
 
 }
