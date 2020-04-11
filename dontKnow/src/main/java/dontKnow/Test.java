@@ -23,6 +23,7 @@ import java.io.FileOutputStream;
 import java.io.IOException;
 import java.lang.reflect.Field;
 import java.math.BigDecimal;
+import java.net.SocketAddress;
 import java.nio.file.FileSystems;
 import java.nio.file.Path;
 import java.text.DecimalFormat;
@@ -880,8 +881,42 @@ public class Test {
 
     @org.junit.Test
     public void test47() {
+        Function<String, String> f1 = i -> i + "执行f1";
+        Function<String, String> f2 = i -> i + "执行f2";
+
+        System.out.println("f1.apply(2) = " + f1.apply("2"));
+        System.out.println("f1.apply(3) = " + f1.apply("3"));
+
+        System.out.println("f1.compose(f2).apply(\"3\") = " + f1.compose(f2).apply("3"));
+        System.out.println("f1.andThen(f2).apply(\"3\") = " + f1.andThen(f2).apply("3"));
+
+        /**
+         * TreeMap可以通过传入外置比较器来定义比较大小的规则
+         */
+        TreeMap<String, Object> objectObjectTreeMap = new TreeMap<String, Object>(new Comparator<String>() {
+            @Override
+            public int compare(String o1, String o2) {
+                return 1;
+            }
+        });
+    }
+
+    @org.junit.Test
+    public void test48() {
 
     }
 
+}
 
+
+class DemoFunctionApply {
+
+    public static void main(String[] args) {
+        method(Integer::parseInt);
+    }
+
+    private static void method(Function<String, Integer> function) {
+        int num = function.apply("10");
+        System.out.println(num + 20);
+    }
 }
