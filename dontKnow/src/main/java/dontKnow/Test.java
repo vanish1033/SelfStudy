@@ -1,11 +1,13 @@
 package dontKnow;
 
 import com.alibaba.fastjson.JSON;
+import com.google.common.collect.Lists;
 import com.google.zxing.BarcodeFormat;
 import com.google.zxing.WriterException;
 import com.google.zxing.client.j2se.MatrixToImageWriter;
 import com.google.zxing.common.BitMatrix;
 import com.google.zxing.qrcode.QRCodeWriter;
+import lombok.extern.java.Log;
 import lombok.extern.slf4j.Slf4j;
 import myannotation.ProblemCode;
 import org.apache.commons.lang3.StringUtils;
@@ -901,9 +903,75 @@ public class Test {
         });
     }
 
+
+    /**
+     * 练习Stream流的用法
+     */
     @org.junit.Test
     public void test48() {
+        ArrayList<Integer> integers = Lists.newArrayList(1, 2, 3, 4);
+        ArrayList<Object> objects = Lists.newArrayList();
+        integers.stream().forEach((x) -> objects.add(x));
+        System.out.println(objects);
+        Collections.reverse(objects);
+//        objects.
+        Integer[] parentIds = new Integer[]{1, 2, 3, 4, 5};
+        ArrayList<Integer> parentIdsReverse = new ArrayList<>();
+        Collections.addAll(parentIdsReverse, parentIds);
+        Collections.reverse(parentIdsReverse);
+        String join = StringUtils.join(parentIdsReverse, "/");
+        System.out.println(join);
 
+        System.out.println(Stream.iterate((int) 2, x -> x * x).mapToDouble(Double::valueOf).limit(67).max());
+        log.info("Arrays.stream(parentIds).reduce((x, y) -> x >= y ? x : y).orElse(-1) = " + Arrays.stream(parentIds).reduce((x, y) -> x >= y ? x : y).orElse(-1));
+
+//        @PostMapping({"add"})
+//        @Log(
+//                logType = LogType.INSERT
+//        )
+////@RequiresMethodPermissions({"add"})
+//        public Response add(DicLable entity, BindingResult result) {
+//            this.checkError(entity, result);
+//            if (entity != null) {
+//                entity.setId(UUIDUtils.getUUID());
+//                User user = UserUtils.getUser();
+//                entity.setCreateBy(user.getId());
+//                entity.setCreateDate(new Date());
+//                StringBuffer parentIds = new StringBuffer("");
+//                if (StringUtils.isNotEmpty(entity.getParentId())) {
+//                    parentIds = getParentIds(parentIds, entity.getParentId());
+//                    String[] split = parentIds.toString().split("/");
+//                    List<String> arrayList = new ArrayList<String>();
+//                    int length = split.length;
+//                    for (int i = 0; i < length; i++) {
+//                        arrayList.add(split[length - i - 1]);
+//                        arrayList.add("/");
+//                    }
+//                    String str = "";
+//                    for (String s : arrayList) {
+//                        str += s;
+//                    }
+//                    if (str.endsWith("/")) {
+//                        str.substring(0, str.length() - 1);
+//                    }
+//                    System.out.println("parentIds = " + str);
+//                    entity.setParentIds(str);
+//                }
+//                dicLableService.insertByEntity(entity);
+//                return Response.ok("添加成功");
+//            }
+//            return Response.error("添加失败");
+//        }
+//
+//        private StringBuffer getParentIds(StringBuffer parentIds, String parentId) {
+//            StringBuffer append = parentIds.append(parentId).append("/");
+//            DicLable dicLable = dicLableService.selectParentId(parentId);
+//            if (StringUtils.isNotEmpty(dicLable.getParentId())) {
+//                StringBuffer parentIds1 = getParentIds(append, dicLable.getParentId());
+//                return parentIds1;
+//            }
+//            return append;
+//        }
     }
 
 }
