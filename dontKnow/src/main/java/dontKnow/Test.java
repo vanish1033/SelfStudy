@@ -1040,15 +1040,3 @@ public class Test {
 
 }
 
-
-class DemoFunctionApply {
-
-    public static void main(String[] args) {
-        method(Integer::parseInt);
-    }
-
-    private static void method(Function<String, Integer> function) {
-        int num = function.apply("10");
-        System.out.println(num + 20);
-    }
-}
