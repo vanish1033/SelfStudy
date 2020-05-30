@@ -2,17 +2,30 @@
 <project version="4">
   <component name="Encoding" defaultCharsetForPropertiesFiles="UTF-8">
     <file url="file://$PROJECT_DIR$/02SESelfstudy" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/02SESelfstudy/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/MyGC" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/MyGC/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/aj" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aj/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/aj/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/demo" charset="UTF-8" />
-    <file url="file://$PROJECT_DIR$/dontKnow" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demo/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/demoJpa/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/dontKnow/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/jedisdemo" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/jedisdemo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/mybatis-plus-1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/mybatis-plus-1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/nio-chat-room" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/nio-chat-room/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/part5kaoshi" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/part5kaoshi/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/restfulssm1" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/restfulssm1/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ssm3" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ssm3/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/zhengti" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/zhengti/src/main/java" charset="UTF-8" />
     <file url="PROJECT" charset="UTF-8" />
   </component>
 </project>

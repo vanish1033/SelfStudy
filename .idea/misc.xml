@@ -15,11 +15,12 @@
         <option value="$PROJECT_DIR$/restfulssm1/pom.xml" />
         <option value="$PROJECT_DIR$/jedisdemo/pom.xml" />
         <option value="$PROJECT_DIR$/part5kaoshi/pom.xml" />
-        <option value="$PROJECT_DIR$/dontKnow/pom.xml" />
         <option value="$PROJECT_DIR$/aj/pom.xml" />
         <option value="$PROJECT_DIR$/nio-chat-room/pom.xml" />
         <option value="$PROJECT_DIR$/mybatis-plus-1/pom.xml" />
         <option value="$PROJECT_DIR$/demo/pom.xml" />
+        <option value="$PROJECT_DIR$/demoJpa/pom.xml" />
+        <option value="$PROJECT_DIR$/dontKnow/pom.xml" />
       </list>
     </option>
   </component>

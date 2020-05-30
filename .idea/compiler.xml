@@ -7,18 +7,19 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-        <module name="ssm3" />
+        <module name="demo" />
         <module name="zhengti" />
-        <module name="MyGC" />
         <module name="nio-chat-room" />
         <module name="jedisdemo" />
-        <module name="demo" />
         <module name="restfulssm1" />
+        <module name="demoJpa" />
         <module name="part5kaoshi" />
+        <module name="02SESelfstudy" />
         <module name="mybatis-plus-1" />
+        <module name="MyGC" />
         <module name="aj" />
         <module name="dontKnow" />
-        <module name="02SESelfstudy" />
+        <module name="ssm3" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
@@ -26,6 +27,7 @@
       <module name="aj" target="1.8" />
       <module name="combjpowernode" target="1.8" />
       <module name="demo" target="1.8" />
+      <module name="demoJpa" target="1.8" />
       <module name="dontKnow" target="1.8" />
       <module name="jedisdemo" target="1.8" />
       <module name="mybatis-plus-1" target="1.8" />
@@ -40,6 +42,7 @@
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
       <module name="demo" options="-parameters" />
+      <module name="demoJpa" options="-parameters" />
       <module name="mybatis-plus-1" options="-parameters" />
     </option>
   </component>
