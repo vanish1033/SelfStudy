@@ -12,7 +12,7 @@ import org.springframework.security.core.userdetails.UserDetailsService;
  */
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(prePostEnabled = true)
-public class WebSercityConfig extends WebSecurityConfigurerAdapter {
+public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 
     /**
      * final -> 构造对象时必须赋值
@@ -24,7 +24,7 @@ public class WebSercityConfig extends WebSecurityConfigurerAdapter {
      *
      * @param userDetailsService
      */
-    public WebSercityConfig(@Qualifier("myJdbcUserDetailsService") UserDetailsService userDetailsService) {
+    public WebSecurityConfig(@Qualifier("myJdbcUserDetailsService") UserDetailsService userDetailsService) {
         this.userDetailsService = userDetailsService;
     }
 
