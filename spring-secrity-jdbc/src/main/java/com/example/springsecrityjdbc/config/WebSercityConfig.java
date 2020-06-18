@@ -1,8 +1,6 @@
 package com.example.springsecrityjdbc.config;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
-import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.security.config.annotation.authentication.builders.AuthenticationManagerBuilder;
 import org.springframework.security.config.annotation.method.configuration.EnableGlobalMethodSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
@@ -16,9 +14,19 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 @EnableGlobalMethodSecurity(prePostEnabled = true)
 public class WebSercityConfig extends WebSecurityConfigurerAdapter {
 
-    @Autowired
-    @Qualifier("myJdbcUserDetailsService")
-    UserDetailsService userDetailsService;
+    /**
+     * final -> 构造对象时必须赋值
+     */
+    final UserDetailsService userDetailsService;
+
+    /**
+     * 构造函数注入
+     *
+     * @param userDetailsService
+     */
+    public WebSercityConfig(@Qualifier("myJdbcUserDetailsService") UserDetailsService userDetailsService) {
+        this.userDetailsService = userDetailsService;
+    }
 
     @Override
     protected void configure(AuthenticationManagerBuilder auth) throws Exception {
