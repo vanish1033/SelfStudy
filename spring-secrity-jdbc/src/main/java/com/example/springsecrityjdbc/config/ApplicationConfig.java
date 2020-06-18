@@ -33,19 +33,23 @@ public class ApplicationConfig {
         PasswordEncoder passwordEncoder = getPasswordEncoder();
         JdbcUserDetailsManager jdbcUserDetailsManager = new JdbcUserDetailsManager(dataSource);
         if (!jdbcUserDetailsManager.userExists("wangHongRui")) {
-            jdbcUserDetailsManager.createUser(new User("wangHongRui", passwordEncoder.encode("123"),
+            jdbcUserDetailsManager.createUser(new User("wangHongRui",
+                    passwordEncoder.encode("123"),
                     Stream.of("ROLE_ADMIN").map(x -> new SimpleGrantedAuthority(x)).collect(Collectors.toList())));
         }
         if (!jdbcUserDetailsManager.userExists("wangYue")) {
-            jdbcUserDetailsManager.createUser(new User("wangYue", passwordEncoder.encode("123"),
+            jdbcUserDetailsManager.createUser(new User("wangYue",
+                    passwordEncoder.encode("123"),
                     Stream.of("ROLE_ADMIN").map(x -> new SimpleGrantedAuthority(x)).collect(Collectors.toList())));
         }
         if (!jdbcUserDetailsManager.userExists("miaoSen")) {
-            jdbcUserDetailsManager.createUser(new User("miaoSen", passwordEncoder.encode("123"),
+            jdbcUserDetailsManager.createUser(new User("miaoSen",
+                    passwordEncoder.encode("123"),
                     Stream.of("ROLE_ADMIN").map(x -> new SimpleGrantedAuthority(x)).collect(Collectors.toList())));
         }
         if (!jdbcUserDetailsManager.userExists("wangKuiXin")) {
-            jdbcUserDetailsManager.createUser(new User("wangKuiXin", passwordEncoder.encode("123"),
+            jdbcUserDetailsManager.createUser(new User("wangKuiXin",
+                    passwordEncoder.encode("123"),
                     Stream.of("ROLE_ADMIN").map(x -> new SimpleGrantedAuthority(x)).collect(Collectors.toList())));
         }
         return jdbcUserDetailsManager;
