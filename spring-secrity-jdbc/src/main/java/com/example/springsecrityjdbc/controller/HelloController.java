@@ -1,19 +1,22 @@
 package com.example.springsecrityjdbc.controller;
 
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 /**
  * TestController
+ *
  * @author vanish
  */
-@RestController
-public class HellloController {
+@Controller
+public class HelloController {
 
     @RequestMapping("/hello")
     @PreAuthorize(value = "hasAnyRole('ADMIN','NORMAL')")
-    public String hello() {
+    public @ResponseBody
+    String hello() {
         return "Hello";
     }
 
